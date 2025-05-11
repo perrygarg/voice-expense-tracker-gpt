@@ -30,6 +30,7 @@ environment:
 dependencies:
   speech_to_text: ^7.0.0
   permission_handler: ^12.0.0+1
+  http: ^1.4.0
   flutter:
     sdk: flutter
 
