@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class GPTService {
-  static const String _apiKey = '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';
+  static const String _apiKey = '';
   static const String _url = 'https://api.openai.com/v1/chat/completions';
 
   Future<Map<String, dynamic>> parseExpense(String sentence) async {
