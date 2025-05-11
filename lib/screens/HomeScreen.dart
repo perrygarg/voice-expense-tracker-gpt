@@ -66,7 +66,18 @@ class _HomeScreenState extends State<HomeScreen> {
               style: const TextStyle(fontSize: 18),
             ),
             if (_parsedExpense != null)
-              Text("Parsed:\n${jsonEncode(_parsedExpense)}", style: const TextStyle(fontSize: 14)),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const SizedBox(height: 24),
+                  const Text("Parsed Output", style: TextStyle(fontWeight: FontWeight.bold)),
+                  Text("Amount: ${_parsedExpense!['amount']}"),
+                  Text("Merchant: ${_parsedExpense!['merchant']}"),
+                  Text("Payment Type: ${_parsedExpense!['paymentType']}"),
+                  Text("Category: ${_parsedExpense!['category']}"),
+                  Text("Date: ${_parsedExpense!['date']}"),
+                ],
+              ),
             const SizedBox(height: 20),
             if (!_isSpeechAvailable)
               const Text(
